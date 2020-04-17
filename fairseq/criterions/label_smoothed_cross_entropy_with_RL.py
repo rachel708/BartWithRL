@@ -386,10 +386,10 @@ class LabelSmoothedCrossEntropyWithRLCriterion(FairseqCriterion):
             sources.append(source)
             targets.append(target)
 
-        input_ids, segment_ids = evaluator_tokenizer.build_data(samples, targets)
-        similarity_score, _ = evaluator_model.predict(input_ids, segment_ids)
-        print("similarity_score:",similarity_score)
-        return similarity_score
+        input_ids, segment_ids = self.evaluator_tokenizer.build_data(samples, targets)
+        similarity_score, _ = self.evaluator_model.predict(input_ids, segment_ids)
+        #print("similarity_score:",similarity_score)
+        return torch.FloatTensor(similarity_score)
 
     def forward(self, model, sample, reduce=True):
         net_output = model(**sample['net_input'])

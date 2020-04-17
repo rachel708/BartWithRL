@@ -1,6 +1,6 @@
 import torch
 import uuid
-from mt_dnn.model import MTDNNModel
+from fairseq.criterions.mt_dnn.model import MTDNNModel
 
 class EvaluatorModel:
     def __init__(self, checkpoint):
