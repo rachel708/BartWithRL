@@ -5,8 +5,8 @@ import json
 import torch
 import random
 from shutil import copyfile
-from data_utils.task_def import TaskType, DataFormat
-from data_utils.task_def import EncoderModelType
+from fairseq.criterions.data_utils.task_def import TaskType, DataFormat
+from fairseq.criterions.data_utils.task_def import EncoderModelType
 
 UNK_ID=100
 BOS_ID=101

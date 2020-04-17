@@ -3,9 +3,9 @@
 import torch.nn as nn
 from pytorch_pretrained_bert.modeling import BertConfig, BertLayerNorm, BertModel
 
-from module.dropout_wrapper import DropoutWrapper
-from module.san import SANClassifier
-from data_utils.task_def import EncoderModelType, TaskType
+from fairseq.criterions.module.dropout_wrapper import DropoutWrapper
+from fairseq.criterions.module.san import SANClassifier
+from fairseq.criterions.data_utils.task_def import EncoderModelType, TaskType
 
 
 class LinearPooler(nn.Module):

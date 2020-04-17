@@ -5,8 +5,8 @@ import torch.nn.functional as F
 import numpy
 from torch.nn.utils import weight_norm
 from torch.nn.parameter import Parameter
-from .common import activation, init_wrapper
-from .dropout_wrapper import DropoutWrapper
+from fairseq.criterions.module.common import activation, init_wrapper
+from fairseq.criterions.module.dropout_wrapper import DropoutWrapper
 
 class DotProduct(nn.Module):
     def __init__(self, x1_dim, x2_dim, prefix='sim', opt={}, dropout=None):

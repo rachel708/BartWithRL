@@ -9,13 +9,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.optim.lr_scheduler import *
-from data_utils.utils import AverageMeter
+from fairseq.criterions.data_utils.utils import AverageMeter
 from pytorch_pretrained_bert import BertAdam as Adam
-from module.bert_optim import Adamax, RAdam
-from module.my_optim import EMA
-from .matcher import SANBertNetwork
+from fairseq.criterions.module.bert_optim import Adamax, RAdam
+from fairseq.criterions.module.my_optim import EMA
+from fairseq.criterions.mt_dnn.matcher import SANBertNetwork
 
-from data_utils.task_def import TaskType
+from fairseq.criterions.data_utils.task_def import TaskType
 
 logger = logging.getLogger(__name__)
 

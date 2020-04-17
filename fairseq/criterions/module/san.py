@@ -5,9 +5,9 @@ import torch.nn as nn
 from torch.nn.utils import weight_norm
 from torch.nn.parameter import Parameter
 import torch.nn.functional as F
-from module.dropout_wrapper import DropoutWrapper
-from module.similarity import FlatSimilarityWrapper, SelfAttnWrapper
-from module.my_optim import weight_norm as WN
+from fairseq.criterions.module.dropout_wrapper import DropoutWrapper
+from fairseq.criterions.module.similarity import FlatSimilarityWrapper, SelfAttnWrapper
+from fairseq.criterions.module.my_optim import weight_norm as WN
 
 SMALL_POS_NUM=1.0e-30
 
